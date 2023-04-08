@@ -88,4 +88,13 @@ function updateLinks(arrayItems) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => updateLinks(amazonItems));
+// Create a callback function to be called when DOM changes are observed
+function onDomChange() {
+  updateLinks(amazonItems);
+}
+
+// Create an instance of MutationObserver with the callback function
+const observer = new MutationObserver(onDomChange);
+
+// Start observing the entire document for changes
+observer.observe(document, { childList: true, subtree: true });
