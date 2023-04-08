@@ -75,7 +75,17 @@ let amazonItems = [
   }
 ];
 
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
 function updateLinks(arrayItems) {
+  console.log('custom script: updating');
   arrayItems.forEach(item => {
     const { link, find_string } = item;
     const links = document.querySelectorAll(`a[href*="${find_string}"]`);
@@ -88,10 +98,12 @@ function updateLinks(arrayItems) {
   });
 }
 
+// Create a debounced version of the updateLinks function
+const debouncedUpdateLinks = debounce(updateLinks, 500);
+
 // Create a callback function to be called when DOM changes are observed
 function onDomChange() {
-  console.log('custom script - changing');
-  updateLinks(amazonItems);
+  debouncedUpdateLinks(amazonItems);
 }
 
 // Create an instance of MutationObserver with the callback function
