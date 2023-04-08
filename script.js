@@ -87,4 +87,4 @@ function updateLinks(arrayItems) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', updateLinks(amazonItems)
+document.addEventListener('DOMContentLoaded', updateLinks(amazonItems));
