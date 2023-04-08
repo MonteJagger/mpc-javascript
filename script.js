@@ -1,4 +1,4 @@
-console.log('Executing custom script', arrayItems);
+console.log('Executing custom script');
 
 let amazonItems = [
   {
