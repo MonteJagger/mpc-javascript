@@ -87,4 +87,5 @@ function updateLinks(arrayItems) {
 //   });
 }
 
-updateLinks(amazonItems)
+
+setTimeout(() => {console.log('timeout'); updateLinks(amazonItems);}, 3000);
