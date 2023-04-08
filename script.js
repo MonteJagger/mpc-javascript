@@ -74,6 +74,7 @@ let amazonItems = [
 ];
 
 function updateLinks(arrayItems) {
+  console.log('this is working', arrayItems);
   arrayItems.forEach(item => {
     const { link, find_string } = item;
     const links = document.querySelectorAll(`a[href*="${find_string}"]`);
