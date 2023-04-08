@@ -75,16 +75,16 @@ let amazonItems = [
 
 function updateLinks(arrayItems) {
   console.log('this is working', arrayItems);
-  arrayItems.forEach(item => {
-    const { link, find_string } = item;
-    const links = document.querySelectorAll(`a[href*="${find_string}"]`);
+//   arrayItems.forEach(item => {
+//     const { link, find_string } = item;
+//     const links = document.querySelectorAll(`a[href*="${find_string}"]`);
 
-    links.forEach(linkElement => {
-      linkElement.setAttribute('href', link);
-      linkElement.setAttribute('target', '_blank');
-      linkElement.setAttribute('rel', 'noopener noreferrer');
-    });
-  });
+//     links.forEach(linkElement => {
+//       linkElement.setAttribute('href', link);
+//       linkElement.setAttribute('target', '_blank');
+//       linkElement.setAttribute('rel', 'noopener noreferrer');
+//     });
+//   });
 }
 
 document.addEventListener('DOMContentLoaded', updateLinks(amazonItems));
