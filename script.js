@@ -90,10 +90,15 @@ function updateLinks(arrayItems) {
     const { link, find_string } = item;
     const links = document.querySelectorAll(`a[href*="${find_string}"]`);
 
-    links.forEach(linkElement => {
+    links.forEach((linkElement, i) => {
       linkElement.setAttribute('href', link);
       linkElement.setAttribute('target', '_blank');
       linkElement.setAttribute('rel', 'noopener noreferrer');
+      
+      const priceWrapper = linkElement.querySelector('.product-price__wrapper');
+      if (priceWrapper) {
+        priceWrapper.innerHTML = '<span><i>Purchase on Amazon</i></span>';
+      }
     });
   });
 }
