@@ -90,6 +90,7 @@ function updateLinks(arrayItems) {
 
 // Create a callback function to be called when DOM changes are observed
 function onDomChange() {
+  console.log('custom script - changing');
   updateLinks(amazonItems);
 }
 
