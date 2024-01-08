@@ -95,6 +95,31 @@ let amazonItems = [
     "link": "https://www.cafepress.com/museumofpoliticalcorruption",
     "find_string": "the-museum-of-political-corruption-button-collection",
     "innerText": "Purchase on our external gift shop"
+  },
+  {
+    "link": "https://a.co/d/g3Rx8iP",
+    "find_string": "profiles-in-ignorance-how-america-s-politicians-got-dumb-and-dumber-andy-borowitz",
+    "innerText": "Purchase on Amazon"
+  },
+  {
+    "link": "https://a.co/d/dzR58Bh",
+    "find_string": "blind-ambition-the-end-of-the-story-john-dean",
+    "innerText": "Purchase on Amazon"
+  },
+  {
+    "link": "https://a.co/d/8ZjX2T0",
+    "find_string": "corruptible-who-gets-power-and-how-it-changes-us-brian-klaas",
+    "innerText": "Purchase on Amazon"
+  },
+  {
+    "link": "https://a.co/d/fQrWMT0",
+    "find_string": "the-bill-of-obligations-the-ten-habits-of-good-citizens-richard-haas",
+    "innerText": "Purchase on Amazon"
+  },
+  {
+    "link": "https://a.co/d/46b6ljo",
+    "find_string": "the-almanac-of-political-corruption-scandals-and-dirty-politics-kim-long",
+    "innerText": "Purchase on Amazon"
   }
 ];
 
